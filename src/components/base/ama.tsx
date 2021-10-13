@@ -15,7 +15,6 @@ export default function Ama() {
 
     async function askQ() {
         await getAnswer(input.current ? input.current?.value.replace("?", "") : '').then((res) => {
-            console.log(res?.data)
             setAnswer(res?.data.answer);
         }).catch((e) => {
             console.log(e);
