@@ -22,7 +22,7 @@ function App() {
         </div>
 
         {/* Body */}
-        <div className={'flex flex-col w-full h-full mt-20 sm:mt-48 px-12 sm:px-32'}>
+        <div className={'flex flex-col w-full h-full mt-20 sm:mt-48 px-10 sm:px-32'}>
           <Hello/>
         </div>
 

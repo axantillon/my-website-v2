@@ -30,7 +30,7 @@ export default function Hello() {
                 }
             </span> 
             <br/>
-            <span className={'text-2xl sm:text-4xl'}> 
+            <span className={'-mr-4 text-2xl sm:text-4xl'}> 
                 <span> I'm </span>
                 <ReactRotatingText
                     ref={rotatingText}
