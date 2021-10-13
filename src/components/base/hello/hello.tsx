@@ -22,7 +22,7 @@ export default function Hello() {
 
     return (
         <div className={'w-full flex flex-col sm:mx-32 py-12'}>
-            <span className={'text-6xl font-extrabold'}>
+            <span className={'text-4xl sm:text-6xl font-extrabold'}>
                 {new Date().getHours() < 18 ?
                 <> gm, </> 
                 :
@@ -30,7 +30,7 @@ export default function Hello() {
                 }
             </span> 
             <br/>
-            <span className={'text-4xl'}> 
+            <span className={'text-2xl sm:text-4xl'}> 
                 <span> I'm </span>
                 <ReactRotatingText
                     ref={rotatingText}
