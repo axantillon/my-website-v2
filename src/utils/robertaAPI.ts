@@ -16,6 +16,7 @@ interface huggingfaceRes {
 }
 
 export async function getAnswer(question: string): Promise< huggingfaceRes | undefined> {
+  console.log(authToken)
   try {
     return await axios.post(
       "https://api-inference.huggingface.co/models/deepset/roberta-base-squad2",
