@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import DarkToggle from "./components/base/darkToggle";
+import Hello from "./components/base/hello/hello";
+import DarkToggle from "./components/utils/darkToggle";
 
 function App() {
 
@@ -7,14 +8,13 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("message", (e) => {
-      console.log('hey')
       setDark(localStorage.getItem('theme') === 'dark')
     })
   })
 
   return (
-    <div className={`${dark && 'dark'} w-screen h-screen font-space`}>
-      <div className={'relative w-full h-full text-black dark:text-white bg-gray-100 dark:bg-gray-900'}>
+    <div className={`${dark && 'dark'} font-space`}>
+      <div className={'relative flex flex-col w-screen h-screen text-black dark:text-white bg-gray-100 dark:bg-gray-900'}>
 
         {/* Header */}
         <div className={`fixed top-6 sm:right-8 right-6`}>
@@ -22,8 +22,8 @@ function App() {
         </div>
 
         {/* Body */}
-        <div className={''}>
-
+        <div className={'flex flex-col w-full h-full mt-20 sm:mt-48 px-12 sm:px-32'}>
+          <Hello/>
         </div>
 
       </div>

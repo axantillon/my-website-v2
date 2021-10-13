@@ -15,10 +15,9 @@ export default function DarkToggle() {
     return (
         <>
             <div className="h-10 w-10 flex items-center justify-center rounded-full border border-black dark:border-white text-white dark:text-black bg-gray-900 dark:bg-gray-100 cursor-pointer" onClick={() => (setDark(!dark))}>
-                { dark &&
+                { dark ?
                     <FiMoon/>
-                }
-                { !dark && 
+                :
                     <FiSun/>
                 }
             </div>
