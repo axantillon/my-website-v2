@@ -43,7 +43,7 @@ export default function Ama() {
                             <FiCornerDownLeft onClick={askQ}/>
                         </div>
                     </div>
-                    <div className="flex sm:hidden justify-center items-center w-12 h-8 rounded-lg text-black bg-gray-100 cursor-pointer">
+                    <div className="flex sm:hidden justify-center items-center w-12 h-8 border dark:border-transparent border-black rounded-lg text-black bg-gray-100 cursor-pointer">
                         <FiCornerDownLeft onClick={askQ}/>
                     </div>
                 </div>
