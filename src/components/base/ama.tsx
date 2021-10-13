@@ -31,14 +31,19 @@ export default function Ama() {
         <div className="w-full space-y-2 sm:space-y-1">
             <span className={'text-xl sm:text-2xl'}> ask me something. </span>
             <br/>
-            <div className="w-full sm:flex sm:space-x-6 space-y-2 sm:space-y-1">
-                <div className="flex w-11/12 sm:w-96 h-8 px-2 py-1 border border-black dark:text-black bg-gray-100">
-                    <input ref={input} 
-                        onKeyDown={handleEnter}
-                        type="text" placeholder={sampleQs[Math.floor(Math.random() * sampleQs.length)]} 
-                        className={'w-full border-none outline-none bg-transparent'} 
-                    />
-                    <div className="flex items-center cursor-pointer">
+            <div className="sm:flex w-full sm:space-x-6 space-y-2 sm:space-y-1">
+                <div className="flex w-full space-x-4">
+                    <div className="flex w-full sm:w-96 h-8 px-2 py-1 border border-black text-sm dark:text-black bg-gray-100">
+                        <input ref={input} 
+                            onKeyDown={handleEnter}
+                            type="text" placeholder={sampleQs[Math.floor(Math.random() * sampleQs.length)]} 
+                            className={'w-full border-none outline-none bg-transparent'} 
+                        />
+                        <div className="hidden sm:flex items-center cursor-pointer">
+                            <FiCornerDownLeft onClick={askQ}/>
+                        </div>
+                    </div>
+                    <div className="flex sm:hidden justify-center items-center w-12 h-8 rounded-lg text-black bg-gray-100 cursor-pointer">
                         <FiCornerDownLeft onClick={askQ}/>
                     </div>
                 </div>
