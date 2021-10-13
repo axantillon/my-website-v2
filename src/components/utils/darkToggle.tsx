@@ -13,14 +13,12 @@ export default function DarkToggle() {
     }, [dark])
 
     return (
-        <>
-            <div className="h-10 w-10 flex items-center justify-center rounded-full border border-black dark:border-white text-white dark:text-black bg-gray-900 dark:bg-gray-100 cursor-pointer" onClick={() => (setDark(!dark))}>
-                { dark ?
-                    <FiMoon/>
-                :
-                    <FiSun/>
-                }
-            </div>
-        </>
+        <div className="h-10 w-10 flex items-center justify-center rounded-full border border-black dark:border-white text-white dark:text-black bg-gray-900 dark:bg-gray-100 cursor-pointer" onClick={() => (setDark(!dark))}>
+            { dark ?
+                <FiMoon/>
+            :
+                <FiSun/>
+            }
+        </div>
     )
 }

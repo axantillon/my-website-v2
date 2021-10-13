@@ -32,8 +32,8 @@ export default function Ama() {
             <span className={'text-xl sm:text-2xl'}> ask me something. </span>
             <br/>
             <div className="sm:flex w-full sm:space-x-6 space-y-2 sm:space-y-1">
-                <div className="flex w-full space-x-4">
-                    <div className="flex w-full sm:w-96 h-8 px-2 py-1 border border-black text-sm dark:text-black bg-gray-100">
+                <div className="flex w-full sm:w-auto space-x-4">
+                    <div className="flex w-full sm:w-96 h-8 px-2 py-1 border border-black text-sm sm:text-base dark:text-black bg-gray-100">
                         <input ref={input} 
                             onKeyDown={handleEnter}
                             type="text" placeholder={sampleQs[Math.floor(Math.random() * sampleQs.length)]} 
@@ -47,7 +47,7 @@ export default function Ama() {
                         <FiCornerDownLeft onClick={askQ}/>
                     </div>
                 </div>
-                <div className="flex items-center text-lg sm:text-xl text-gray-600">
+                <div className="flex items-center w-full text-lg sm:text-xl text-gray-600">
                     {answer !== undefined ? 
                         <span> {answer} </span>
                     :
