@@ -34,16 +34,7 @@ export default function Projects() {
     )
 }
 
-function RepoCard({ repo, desc, url, stars, lang }: repo) {
-
-    const langColors: {[id: string]: string} = {
-        "vue": "green-500",
-        "javascript": "yellow-300",
-        "jupyter notebook": "yellow-500",
-        "python": "purple-600",
-        "typescript": "blue-600",
-        "undef": 'black'
-    }
+function RepoCard({ repo, desc, url, stars, lang, langColor }: repo) {
 
     const [expanded, setExpanded] = useState<boolean>(false);
 
@@ -81,7 +72,7 @@ function RepoCard({ repo, desc, url, stars, lang }: repo) {
                         </div> 
                         <span> - </span>
                         {lang &&
-                            <span className={`font-bold ${'text-'+langColors[lang]}`}> {lang} </span>
+                            <span className={`font-bold ${'text-'+langColor}`}> {lang} </span>
                         }
                     </div>
                     <div className="sm:hidden flex">
@@ -96,7 +87,7 @@ function RepoCard({ repo, desc, url, stars, lang }: repo) {
             </div>
             
             {lang &&
-                <div className={`absolute right-0 w-4 h-full ${'bg-'+langColors[lang]}`}></div>
+                <div className={`absolute right-0 w-4 h-full ${'bg-'+langColor}`}></div>
             }
         </div>
     )

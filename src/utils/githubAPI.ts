@@ -22,8 +22,19 @@ export interface repo {
   desc?: string;
   url?: string;
   stars?: number;
-  lang: string;
+  lang?: string;
+  langColor?: string;
 }
+
+
+const langColors: { [id: string]: string } = {
+  vue: "green-500",
+  javascript: "yellow-300",
+  "jupyter notebook": "yellow-500",
+  python: "purple-600",
+  typescript: "blue-600",
+  undef: "black",
+};
 
 export async function getGithubData(): Promise<Array<repo> | undefined> {
   let response: githubRes | undefined = await axios.get(
@@ -44,5 +55,6 @@ export async function getGithubData(): Promise<Array<repo> | undefined> {
       url: o.html_url,
       stars: o.stargazers_count,
       lang: o.language.toLowerCase(),
+      langColor: langColors[o.language.toLowerCase()]
     }));
 }
