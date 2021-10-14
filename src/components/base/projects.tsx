@@ -19,8 +19,8 @@ export default function Projects() {
     }, [repos])
 
     return (
-        <div className="flex flex-col w-full ">
-            <span className='text-2xl'> some of my projects </span>
+        <div className="flex flex-col w-full mt-6 sm:mt-0">
+            <span className='text-xl sm:text-2xl'> some of my projects </span>
             <div className="flex flex-col w-full py-4 space-y-2">
                 {repos ?
                     <>
@@ -48,16 +48,16 @@ function RepoCard({ repo, desc, url, stars, lang }: repo) {
     const [expanded, setExpanded] = useState<boolean>(false);
 
     return (
-        <div onClick={() => {setExpanded(!expanded)}}  className={`relative flex justify-between w-full ${expanded ? 'h-full' : 'h-16'} border border-black dark:border-white transition-all duration-800 ease-in-out cursor-pointer`}>
+        <div onClick={() => {setExpanded(!expanded)}}  className={`relative flex justify-between w-full ${expanded ? 'h-full' : 'h-12 sm:h-16'} border border-black dark:border-white text-xs sm:text-base transition-all duration-800 ease-in-out cursor-pointer`}>
             <div className='flex flex-col w-full h-full'>
-                <div className="flex items-center justify-between w-full h-16 pl-4 pr-6">
+                <div className="flex items-center justify-between w-full h-12 sm:h-16 pl-4 pr-6">
                     <div className="flex flex-grow items-center h-full space-x-2">
                         <span> {repo} </span>
                         {desc && 
-                            <>
+                            <div className="hidden sm:flex">
                                 <span> - </span>
                                 <span className={'w-3/4 truncate'}> {desc} </span>
-                            </>
+                            </div>
                         }
                     </div>
 
@@ -73,13 +73,23 @@ function RepoCard({ repo, desc, url, stars, lang }: repo) {
                     </div>
                 </div>
                 
-                <div className={`flex items-center w-full ${expanded ? 'flex': 'hidden'} px-8 pb-6 space-x-2`}>
-                    <div className="flex items-center h-full mt-1 space-x-1"> 
-                        <FiStar/> 
-                        <span> {stars} </span> 
-                    </div> 
-                    <span> - </span>
-                    <span className={`font-bold ${'text-'+langColors[lang]}`}> {lang} </span>
+                <div className={`flex-col w-full ${expanded ? 'flex': 'hidden'} -mt-2 sm:mt-0 px-8 pb-4 sm:pb-6 space-y-2`}>
+                    <div className="flex items-center space-x-2">
+                        <div className="flex items-center h-full mt-1 space-x-1"> 
+                            <FiStar/> 
+                            <span> {stars} </span> 
+                        </div> 
+                        <span> - </span>
+                        <span className={`font-bold ${'text-'+langColors[lang]}`}> {lang} </span>
+                    </div>
+                    <div className="sm:hidden flex">
+                        {desc && 
+                            <div className="sm:hidden flex">
+                                <span> - </span>
+                                <span className={'w-full'}> {desc} </span>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
             
