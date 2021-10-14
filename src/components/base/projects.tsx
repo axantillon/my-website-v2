@@ -22,10 +22,12 @@ export default function Projects() {
         <div className="flex flex-col w-full ">
             <span className='text-2xl'> some of my projects </span>
             <div className="flex flex-col w-full py-4 space-y-2">
-                {repos &&
+                {repos ?
                     <>
                         {repos.map((repo, i) => <RepoCard key={i} {...repo}/>)}
                     </>
+                :
+                    <div className="w-full h-28"></div>
                 }
             </div>
         </div>
