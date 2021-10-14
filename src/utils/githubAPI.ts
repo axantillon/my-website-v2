@@ -28,11 +28,11 @@ export interface repo {
 
 
 const langColors: { [id: string]: string } = {
-  vue: "green-500",
-  javascript: "yellow-300",
-  "jupyter notebook": "yellow-500",
-  python: "purple-600",
-  typescript: "blue-600",
+  vue: "#10B981",
+  javascript: "#FCD34D",
+  "jupyter notebook": "#F59E0B",
+  python: "#7C3AED",
+  typescript: "#4F46E5",
   undef: "black",
 };
 

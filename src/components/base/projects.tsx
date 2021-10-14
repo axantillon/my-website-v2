@@ -71,7 +71,7 @@ function RepoCard({ repo, desc, url, stars, lang, langColor }: repo) {
                             <span> {stars} </span> 
                         </div> 
                         <span> - </span>
-                        <span className={`font-bold ${langColor && 'text-'+langColor}`}> {lang} </span>
+                        <span className={`font-bold`} style={{color: langColor}}> {lang} </span>
                     </div>
                     <div className="sm:hidden flex">
                         {desc && 
@@ -84,7 +84,7 @@ function RepoCard({ repo, desc, url, stars, lang, langColor }: repo) {
                 </div>
             </div>
             
-            <div className={`absolute right-0 w-4 h-full ${langColor && 'bg-'+langColor}`}></div>
+            <div className={`absolute right-0 w-4 h-full`} style={{backgroundColor: langColor}}></div>
         </div>
     )
 }
