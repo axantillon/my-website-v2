@@ -19,14 +19,14 @@ function App() {
       <div className={'relative flex flex-col pb-24 text-black dark:text-white bg-gray-100 dark:bg-gray-900'}>
 
         {/* Welcome Page */}
-        <div className="flex-col w-full h-screen ">
+        <div className="flex-col w-full h-screen">
           <div className="flex items-center justify-between w-full h-24 px-6">
             <span> andres antillon </span>
           
             <DarkToggle/>
           </div>          
 
-          <div className="flex-col w-full h-full px-32 pt-44 space-y-12">
+          <div className="flex-col w-full h-full px-10 sm:px-32 pt-16 sm:pt-44 space-y-16 sm:space-y-12">
             <Hello/>
 
             <Ama/>
