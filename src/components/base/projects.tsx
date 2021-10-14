@@ -76,7 +76,6 @@ function RepoCard({ repo, desc, url, stars, lang, langColor }: repo) {
                     <div className="sm:hidden flex">
                         {desc && 
                             <div className="sm:hidden flex">
-                                <span> - </span>
                                 <span className={'w-full'}> {desc} </span>
                             </div>
                         }
