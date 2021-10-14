@@ -38,8 +38,6 @@ function RepoCard({ repo, desc, url, stars, lang, langColor }: repo) {
 
     const [expanded, setExpanded] = useState<boolean>(false);
 
-    console.log(langColor)
-
     return (
         <div onClick={() => {setExpanded(!expanded)}}  className={`relative flex justify-between w-full ${expanded ? 'h-full' : 'h-12 sm:h-16'} border border-black dark:border-white text-xs sm:text-base transition-all duration-800 ease-in-out cursor-pointer`}>
             <div className='flex flex-col w-full h-full'>
