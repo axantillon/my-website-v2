@@ -21,7 +21,7 @@ export default function Hello() {
 
 
     return (
-        <div className={'w-full flex flex-col sm:mx-20 py-12'}>
+        <div className={'w-full flex flex-col sm:mx-20 py-8'}>
             <span className={'text-4xl sm:text-6xl font-extrabold'}>
                 {new Date().getHours() < 18 ?
                 <> gm, </> 

@@ -9335,6 +9335,11 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
+react-fetch-hook@^1.8.5:
+  version "1.8.5"
+  resolved "https://registry.npmjs.org/react-fetch-hook/-/react-fetch-hook-1.8.5.tgz#23fd871cc059cce71528865ca8421374ffa67756"
+  integrity sha512-HRkfFAGGS6u3xknFWvgNQBUBRkM0ZZnUlyv4yVy2e+ZijUDOPJ+CwgpZ5nvrNd6QVU8++KcV/9WSe3TyW/N/rA==
+
 react-icons@^4.3.1:
   version "4.3.1"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
