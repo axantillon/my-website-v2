@@ -3,6 +3,8 @@ import axios from "axios";
 // API TOKEN IS PUBLIC, PLEASE DON'T ABUSE. IT'S PERMISSIONS ARE READ ONLY. NO ACCESS TO PRIVATE REPOS
 const authToken = process.env.REACT_APP_GITHUB_TOKEN;
 
+console.log(authToken)
+
 interface githubRes {
   data: Array<rawRepo>;
 }
