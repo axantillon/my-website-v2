@@ -64,7 +64,7 @@ function RepoCard({ repo, desc, url, stars, lang, langColor }: repo) {
                     </div>
                 </div>
                 
-                <div className={`flex-col w-full ${expanded ? 'flex': 'hidden'} -mt-2 sm:mt-0 px-8 pb-4 sm:pb-6 space-y-2`}>
+                <div className={`flex-col w-full ${expanded ? 'flex': 'hidden'} -mt-2 sm:mt-0 px-8 pb-2 sm:pb-6 space-y-2`}>
                     <div className="flex items-center space-x-2">
                         <div className="flex items-center h-full mt-1 space-x-1"> 
                             <FiStar/> 
