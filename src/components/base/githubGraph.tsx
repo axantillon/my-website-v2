@@ -83,7 +83,7 @@ export default function GithubGraph() {
             </div>
             { yearList &&
                 <div className="relative w-full h-10">
-                    <Dropdown className={'absoulute z-10 w-20 px-2 border border-black dark:border-white cursor-pointer'} controlClassName={'flex items-center justify-between'} options={yearList} onChange={onYearChange} value={yearList[year]} placeholder="Select an option" arrowClosed={<FiChevronDown/>} arrowOpen={<FiChevronUp/>} />
+                    <Dropdown className={'absoulute z-10 w-20 px-2 border border-black dark:border-white bg-white dark:bg-gray-900 cursor-pointer'} controlClassName={'flex items-center justify-between'} options={yearList} onChange={onYearChange} value={yearList[year]} placeholder="Select an option" arrowClosed={<FiChevronDown/>} arrowOpen={<FiChevronUp/>} />
                 </div>
             }
             <div className="w-full sm:w-5/12">
