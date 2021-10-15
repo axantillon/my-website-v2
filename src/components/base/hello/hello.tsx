@@ -5,9 +5,9 @@ var ReactRotatingText = require('react-rotating-text');
 export default function Hello() {
 
     const rotatingText = useRef<typeof ReactRotatingText>(null);
-    const names = ['Andres Antillon.', 'axantillon.eth', 'a student.', 'a builder.'];
-    const darkColors = ['white', 'blue', 'yellow', 'green'];
-    const lightColors = ['black', 'blue', 'red', 'green'];
+    const names = ['andres antillon.', 'axantillon.eth', 'a student.', 'a builder.', 'costa rican.'];
+    const darkColors = ['white', 'blue', 'yellow', 'green', 'pink'];
+    const lightColors = ['ufch', 'blue', 'red', 'green', 'fuchsia'];
     const [currentColor, setCurrentColor] = useState<number>(0);
     const [colorScheme, setColorScheme] = useState<Array<string>>(localStorage.getItem('theme') === 'dark' ? darkColors : lightColors)
 
