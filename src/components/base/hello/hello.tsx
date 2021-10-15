@@ -7,7 +7,7 @@ export default function Hello() {
     const rotatingText = useRef<typeof ReactRotatingText>(null);
     const names = ['andres antillon.', 'axantillon.eth', 'a student.', 'a builder.', 'costa rican.'];
     const darkColors = ['white', 'blue', 'yellow', 'green', 'pink'];
-    const lightColors = ['ufch', 'blue', 'red', 'green', 'fuchsia'];
+    const lightColors = ['black', 'blue', 'red', 'green', 'fuchsia'];
     const [currentColor, setCurrentColor] = useState<number>(0);
     const [colorScheme, setColorScheme] = useState<Array<string>>(localStorage.getItem('theme') === 'dark' ? darkColors : lightColors)
 
