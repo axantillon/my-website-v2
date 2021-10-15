@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 require('dotenv').config()
 
 // Set website theme
-localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+localStorage.getItem('theme') ?? localStorage.setItem('theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
 ReactDOM.render(
   <React.StrictMode>
