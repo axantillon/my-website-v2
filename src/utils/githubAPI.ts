@@ -7,7 +7,7 @@ interface githubRes {
   data: Array<rawRepo>;
 }
 
-export interface rawRepo {
+interface rawRepo {
   name: string;
   description: string;
   html_url: string;
@@ -36,7 +36,7 @@ const langColors: { [id: string]: string } = {
   undef: "black",
 };
 
-export async function getGithubData(): Promise<Array<repo> | undefined> {
+export async function getRepoData(): Promise<Array<repo> | undefined> {
   let response: githubRes | undefined = await axios.get(
     "https://api.github.com/users/andantillon/repos",
     {
@@ -57,4 +57,29 @@ export async function getGithubData(): Promise<Array<repo> | undefined> {
       lang: o.language.toLowerCase(),
       langColor: langColors[o.language.toLowerCase()]
     }));
+}
+
+export interface contributions {
+  yearList?: any;
+  months?: any;
+}
+
+interface contributionsRes {
+  data: {
+    years: any[];
+  }
+}
+
+export async function getContributionData(): Promise<contributions | undefined> {
+  let response: contributionsRes | undefined = await axios.get(
+    "https://contributions-api.herokuapp.com/api/years/months/andantillon"
+  );
+
+  let yearList = response?.data.years.map((o) => o.year);
+
+  let months = response?.data.years.map((o) =>
+    o.months.map((m: { count: number }) => m.count)
+  );
+
+  return { yearList, months };
 }

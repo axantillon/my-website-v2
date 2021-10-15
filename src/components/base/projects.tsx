@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react"
 import { FiChevronDown, FiChevronUp, FiStar } from "react-icons/fi"
-import { getGithubData, repo } from "../../utils/githubAPI"
+import { getRepoData, repo } from "../../utils/githubAPI"
 
 export default function Projects() {
 
     const [repos, setRepos] = useState<repo[] | undefined>()
 
-    async function getData(): Promise<repo[] | undefined> {
-        return await getGithubData()
-    }
-
     useEffect(() => {
         if(repos === undefined) {
-            getData().then((res) => {
+            getRepoData().then((res) => {
                 setRepos(res);
             });
         }

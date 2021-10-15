@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Ama from "./components/base/ama";
+import GithubGraph from "./components/base/githubGraph";
 import Hello from "./components/base/hello/hello";
 import Projects from "./components/base/projects";
 import DarkToggle from "./components/utils/darkToggle";
@@ -34,9 +35,15 @@ function App() {
         </div>
 
         {/* Body */}
-        <div className={'flex flex-col w-full h-full mt-2 px-10 sm:px-32 sm:space-y-28'}>
+        <div className={'flex flex-col w-full h-full mt-2 px-10 sm:px-32 space-y-8 sm:space-y-12'}>
 
           <Projects/>
+
+          <div className="flex-col sm:flex items-center space-between w-full ">
+            <GithubGraph/>
+
+
+          </div>
 
         </div>
 
